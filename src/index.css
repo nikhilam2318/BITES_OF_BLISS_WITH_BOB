@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* NEW VIBRANT PALETTE */
+    /* Cleaner, brighter Cream background */
+    --background: 45 30% 96%; 
+    /* Richer, Darker Green for high contrast text */
+    --foreground: 152 40% 18%; 
+
+    --card: 0 0% 100%;
+    --card-foreground: 152 40% 18%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 152 40% 18%;
+
+    --primary: 152 40% 18%;
+    --primary-foreground: 45 30% 96%;
+
+    --secondary: 45 30% 93%;
+    --secondary-foreground: 152 40% 18%;
+
+    --muted: 45 20% 90%;
+    --muted-foreground: 152 20% 40%;
+
+    /* THE BIG CHANGE: SPICY AMBER / VIBRANT GOLD */
+    /* Was: 43 69% 52% (Dull) -> Now: 48 96% 53% (Vibrant) */
+    --accent: 48 96% 53%; 
+    --accent-foreground: 152 40% 15%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 45 20% 85%;
+    --input: 45 20% 85%;
+    --ring: 48 96% 53%;
+
+    --radius: 0.75rem;
+
+    /* Custom tokens */
+    --whatsapp: 142 70% 45%;
+
+    /* Typography */
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --font-sans: 'Inter', system-ui, sans-serif;
+
+    /* Shadows - Made slightly warmer */
+    --shadow-soft: 0 4px 20px -4px hsl(48 96% 53% / 0.15);
+    --shadow-card: 0 8px 30px -8px hsl(152 27% 23% / 0.1);
+    --shadow-elevated: 0 20px 50px -15px hsl(152 27% 23% / 0.15);
+  }
+
+  .dark {
+    --background: 152 30% 8%;
+    --foreground: 45 30% 96%;
+    --card: 152 25% 12%;
+    --card-foreground: 45 30% 96%;
+    --popover: 152 25% 12%;
+    --popover-foreground: 45 30% 96%;
+    --primary: 48 96% 53%;
+    --primary-foreground: 152 27% 10%;
+    --secondary: 152 20% 18%;
+    --secondary-foreground: 45 30% 96%;
+    --muted: 152 20% 15%;
+    --muted-foreground: 45 20% 70%;
+    --accent: 48 96% 53%;
+    --accent-foreground: 152 27% 10%;
+    --border: 152 20% 20%;
+    --input: 152 20% 20%;
+    --ring: 48 96% 53%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-background/80 backdrop-blur-lg border-b border-border/50;
+  }
+
+  .btn-gold {
+    /* Updated for new vibrancy */
+    @apply bg-accent text-accent-foreground hover:bg-yellow-400 hover:shadow-[0_0_15px_rgba(255,193,7,0.5)] transition-all duration-300 font-bold;
+  }
+
+  .btn-outline-gold {
+    @apply border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground transition-all duration-300;
+  }
+
+  .card-menu {
+    @apply bg-card rounded-2xl shadow-card hover:shadow-elevated transition-shadow duration-500;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24 px-4 md:px-8 w-full max-w-full;
+  }
+
+  .container-narrow {
+    @apply w-full max-w-6xl mx-auto px-4 md:px-6;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
