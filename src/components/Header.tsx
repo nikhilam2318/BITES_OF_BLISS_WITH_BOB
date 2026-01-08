@@ -141,25 +141,25 @@ const Header = () => {
                       onClick={() => setOrderOpen(false)}
                       className="w-full bg-accent text-accent-foreground text-center px-4 py-2 rounded-md font-medium hover:bg-yellow-400 hover:shadow-[0_0_15px_rgba(255,193,7,0.5)] transition-all"
                     >
-                      Uber Eats
+                       Uber Eats
                     </a>
 
                     <a
-
+                      
                       target="_blank"
                       onClick={() => setOrderOpen(false)}
                       className="w-full bg-accent text-accent-foreground text-center px-4 py-2 rounded-md font-medium hover:bg-yellow-400 hover:shadow-[0_0_15px_rgba(255,193,7,0.5)] transition-all"
                     >
-                      Deliveroo Delivery
+                       Deliveroo Delivery
                     </a>
 
                     <a
-
+        
                       target="_blank"
                       onClick={() => setOrderOpen(false)}
                       className="w-full bg-accent text-accent-foreground text-center px-4 py-2 rounded-md font-medium hover:bg-yellow-400 hover:shadow-[0_0_15px_rgba(255,193,7,0.5)] transition-all"
                     >
-                      Deliveroo Pickup
+                       Deliveroo Pickup
                     </a>
                   </motion.div>
                 )}
@@ -236,21 +236,21 @@ const Header = () => {
                         onClick={() => { setOrderOpen(false); setMobileMenuOpen(false); }}
                         className="w-full bg-accent text-accent-foreground px-4 py-2 rounded-md font-medium text-center hover:bg-yellow-400 hover:shadow-[0_0_15px_rgba(255,193,7,0.5)] transition-all"
                       >
-                        Uber Eats
+                         Uber Eats
                       </a>
 
                       <a
                         onClick={() => { setOrderOpen(false); setMobileMenuOpen(false); }}
                         className="w-full bg-accent text-accent-foreground px-4 py-2 rounded-md font-medium text-center hover:bg-yellow-400 hover:shadow-[0_0_15px_rgba(255,193,7,0.5)] transition-all"
                       >
-                        Deliveroo Delivery
+                         Deliveroo Delivery
                       </a>
 
                       <a
                         onClick={() => { setOrderOpen(false); setMobileMenuOpen(false); }}
                         className="w-full bg-accent text-accent-foreground px-4 py-2 rounded-md font-medium text-center hover:bg-yellow-400 hover:shadow-[0_0_15px_rgba(255,193,7,0.5)] transition-all"
                       >
-                        Deliveroo Pickup
+                         Deliveroo Pickup
                       </a>
                     </motion.div>
                   )}
